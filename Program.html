@@ -1,0 +1,168 @@
+
+
+<style>
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid white;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 14px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+
+
+</style>
+<head>
+		<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+				<meta name="description" content="">
+				<meta name="author" content="">
+				<link rel="icon" href="../../../../favicon.ico">
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			
+			
+				<title>Narrow Jumbotron Template for Bootstrap</title>
+			
+				<!-- Bootstrap core CSS -->
+				<link href="../../css/editor.css" rel="stylesheet">
+			
+				<!-- Custom styles for this template -->
+				<link href="narrow-jumbotron.css" rel="stylesheet">
+			  </head>
+</head>
+<body>
+		<div class="container">
+				<div class="header clearfix">
+				  <nav>
+					<ul class="nav nav-pills float-right">
+					  <li class="nav-item">
+						<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="Guide">Guide</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="Contact">Contact</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link active" href="Program">Read excel</a>
+						</li>
+					</ul>
+				  </nav>
+				  <h3 class="text-muted">IBMCIC excel reader <br></h3>
+				</div>
+
+<!-- multistep form -->
+<form method="POST" id="msform" enctype="multipart/form-data">
+    <!-- progressbar -->
+  
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Upload .xlsx files</h2>
+      <h3 class="fs-subtitle">Make sure the file is .xlsx</h3>
+      <div class="btn btn-primary btn-sm float-left">
+        <span>File with unsorted Data</span>
+        <input type="file" name="file1" id="input-file-now-custom-2" class="file-upload"/>
+      </div>
+     
+      <input type="text" name="ColumnnameFile1" placeholder="Column name for first file"> 
+      <input type="text" name="Sheetname1" placeholder="Sheet name"> 
+      <span>Chose column names to search for software in (Separte with comma)</span>
+      <input type="text" name="SearchCols" placeholder="Software IDs, Frameworks, HostSoftware, Groups....">
+
+
+     
+      
+
+      <div class="btn btn-primary btn-sm float-left">
+        <span>File with unique hosts</span>
+        <input type="file" name="file2" id="input-file-now-custom-2" class="file-upload"/>
+      </div>
+      <input type="text" name="ColumnnameFile2" placeholder="Column name for second file"> 
+      <input type="text" name="Sheetname2" placeholder="Sheet name"> 
+      
+      
+      <div class="btn btn-primary btn-sm float-left">
+        <span>Filter list</span>
+        <input type="file" name="file3" id="input-file-now-custom-2" class="file-upload"/>
+      </div>
+      <input type="text" name="ColumnnameFile3" placeholder="Column name for filter list"> 
+      <input type="text" name="Sheetname3" placeholder="Sheet name"> 
+     
+
+
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+
+    </fieldset>
+    
+  </form>
+</body>

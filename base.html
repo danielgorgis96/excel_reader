@@ -1,0 +1,41 @@
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    {% endblock %}
+  </head>
+  {% block body %}
+  <body>
+
+      <div class="container">
+          <div class="header clearfix">
+            <nav>
+              <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                  <a class="nav-link active" href="Home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Guide">Guide</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Program">Read excel</a>
+                  </li>
+              </ul>
+            </nav>
+            <h3 class="text-muted">IBMCIC excel reader <br></h3>
+          </div>
+        </body>
+        {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      
+      {% endblock %}
+    </div>
+ 
+</html>
